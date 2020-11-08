@@ -33,11 +33,15 @@ class App extends Component {
     })} )
   }
 
+  delTarefa = (id) => {
+    this.setState({tarefas: [...this.state.tarefas.filter(tarefa => tarefa.id !== id)]});
+  }
+
   render() {
     return (
       <div className="App">
         <h1>App</h1>
-        <Tarefas tarefas={this.state.tarefas} markComplete={this.markComplete} />
+        <Tarefas tarefas={this.state.tarefas} markComplete={this.markComplete} delTarefa={this.delTarefa} />
       </div>
     );
   }

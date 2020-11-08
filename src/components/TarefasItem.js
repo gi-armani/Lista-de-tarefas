@@ -18,6 +18,7 @@ class TarefasItem extends Component {
             <p>
                 <input type='checkbox' onChange={this.props.markComplete.bind(this, this.props.tarefa.id)} /> {' '}
                 { this.props.tarefa.title }
+                <button onClick={this.props.delTarefa.bind(this, this.props.tarefa.id)} style={btnStyle} >X</button>
             </p>
         </div>
     );
@@ -27,6 +28,16 @@ class TarefasItem extends Component {
 //PropTypes
 TarefasItem.propTypes = {
     tarefa: PropTypes.object.isRequired
+}
+
+const btnStyle = {
+    background: '#ff0000',
+    color: '#fff',
+    border: 'none',
+    padding: '5px 10px',
+    borderRadius: '50%',
+    cursor: 'pointer',
+    float: 'right'
 }
 
 export default TarefasItem;

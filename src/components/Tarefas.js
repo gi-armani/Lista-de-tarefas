@@ -7,7 +7,7 @@ class Tarefas extends Component {
   render() {
     return this.props.tarefas.map((tarefa) => (
       //<h3>{ tarefa.title }</h3>
-      <TarefasItem chave={tarefa.id} tarefa={tarefa} markComplete={this.props.markComplete} />
+      <TarefasItem chave={tarefa.id} tarefa={tarefa} markComplete={this.props.markComplete} delTarefa={this.props.delTarefa} />
     ));
   }
 
