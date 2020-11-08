@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Header from './components/layouts/Header';
 import './App.css';
+import Header from './components/layouts/Header';
+import AdicionaTarefa from './components/AdicionaTarefa';
 import Tarefas from './components/Tarefas';
 
 class App extends Component {
@@ -41,8 +42,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="container">
         <Header />
+        <AdicionaTarefa />
         <Tarefas tarefas={this.state.tarefas} markComplete={this.markComplete} delTarefa={this.delTarefa} />
+        </div>
       </div>
     );
   }
