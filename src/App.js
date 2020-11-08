@@ -1,4 +1,5 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
+import Header from './components/layouts/Header';
 import './App.css';
 import Tarefas from './components/Tarefas';
 
@@ -40,7 +41,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>App</h1>
+        <Header />
         <Tarefas tarefas={this.state.tarefas} markComplete={this.markComplete} delTarefa={this.delTarefa} />
       </div>
     );
