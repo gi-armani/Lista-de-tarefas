@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import Header from './components/layouts/Header';
 import AdicionaTarefa from './components/AdicionaTarefa';
 import Tarefas from './components/Tarefas';
+import About from './components/pages/About';
 import {v4 as uuid} from 'uuid';
 
 class App extends Component {
@@ -53,13 +55,21 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="container">
-        <Header />
-        <AdicionaTarefa adicionaTarefa={this.adicionaTarefa} />
-        <Tarefas tarefas={this.state.tarefas} markComplete={this.markComplete} delTarefa={this.delTarefa} />
+      <Router>
+        <div className="App">
+          <div className="container">
+            <Header />
+            <Route exact path="/" render={props => (
+              <React.Fragment>
+                  <AdicionaTarefa adicionaTarefa={this.adicionaTarefa} />
+                  <Tarefas tarefas={this.state.tarefas} markComplete={this.markComplete} delTarefa={this.delTarefa} />
+              </React.Fragment>
+            )} />
+            <Route path="/about" component={About} />
+          </div>
         </div>
-      </div>
+      </Router>
+      
     );
   }
 }
