@@ -8,6 +8,6 @@ app.use(express.urlencoded({extended: false})); //recebe dados por fomularios
 //Rotas
 app.use(require('./routes/routes'));
 
-app.listen(4001, () => {
+app.listen(3001, () => {
     console.log("Rodando na porta 3001");
 })

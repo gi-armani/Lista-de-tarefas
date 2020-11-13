@@ -11,9 +11,16 @@ const pool = new Pool({
 const getTarefas = async (req, res) => {
     const query = "SELECT * FROM tarefas";
     const response = await pool.query(query);
-    res.send(response);
+    res.status(200).json(response.rows);
+}
+
+const createTarefas = async (req, res) => {
+    const query = "INSERT INTO tarefas (id, nome, categoria, estacompleta) VALUES (1, 'Terminar crud', 'Estudos dev', false);";
+    const response = await pool.query(query);
+    res.status(200).json(response.rows);
 }
 
 module.exports = {
-    getTarefas
+    getTarefas,
+    createTarefas
 }
