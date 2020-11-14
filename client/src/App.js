@@ -4,7 +4,7 @@ import './App.css';
 import Header from './components/layouts/Header';
 import AdicionaTarefa from './components/AdicionaTarefa';
 import Tarefas from './components/Tarefas';
-import About from './components/pages/About';
+import About from './pages/About';
 import {v4 as uuid} from 'uuid';
 
 class App extends Component {

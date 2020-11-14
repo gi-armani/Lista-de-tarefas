@@ -15,7 +15,7 @@ const getTarefas = async (req, res) => {
 }
 
 const createTarefas = async (req, res) => {
-    const query = "INSERT INTO tarefas (id, nome, categoria, estacompleta) VALUES (1, 'Terminar crud', 'Estudos dev', false);";
+    const query = "INSERT INTO tarefas (id, nome, categoria, estacompleta) VALUES (2, 'Estudar banco de dados', 'Graduação', false);";
     const response = await pool.query(query);
     res.status(200).json(response.rows);
 }
