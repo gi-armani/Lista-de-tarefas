@@ -5,6 +5,7 @@ import Header from './components/layouts/Header';
 import AdicionaTarefa from './components/AdicionaTarefa';
 import Tarefas from './components/Tarefas';
 import About from './pages/About';
+import AdicionarTarefas from './pages/AdicionarTarefas'
 import {v4 as uuid} from 'uuid';
 
 class App extends Component {
@@ -66,6 +67,7 @@ class App extends Component {
               </React.Fragment>
             )} />
             <Route path="/about" component={About} />
+            <Route path="/add" component={AdicionarTarefas} />
           </div>
         </div>
       </Router>
