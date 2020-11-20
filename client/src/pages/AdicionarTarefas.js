@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 
-function AdicionaTarefa() {
+function AdicionarTarefa() {
 
     const [nome, setNome] = useState("");
     const [categoria, setCategoria] = useState("");
@@ -43,4 +43,4 @@ function AdicionaTarefa() {
     )
 }
 
-export default AdicionaTarefa
+export default AdicionarTarefa
