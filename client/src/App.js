@@ -69,6 +69,11 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/add" component={AdicionarTarefas} />
           </div>
+
+          <div className="mostrarTarefas">
+            <button>Mostrar tarefas</button>
+          </div>
+
         </div>
       </Router>
       
